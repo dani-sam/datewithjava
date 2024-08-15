@@ -18,6 +18,7 @@ public class Customer {
 	}
 
 	public void setAddress(String address) {
+		address += "Dealership City";
 		this.address = address;
 	}
 
@@ -26,10 +27,12 @@ public class Customer {
 	}
 
 	public void setCashOnHand(double cashOnHand) {
+		cashOnHand += 500;
 		this.cashOnHand = cashOnHand;
 	}
 
 	public void purchaseCar(Vehicle vehicle,Employee emp,boolean finance) {
+		emp.handleCustomer(this, finance, vehicle);
 		
 	}
 }
